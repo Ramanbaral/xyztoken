@@ -2,7 +2,7 @@ window.ethereum.enable();
 
 const provider = new ethers.providers.Web3Provider(window.ethereum);
 
-const contractAddress = "0xbE4d76468B12E4C2A41917d39a711edD425418D0";
+const contractAddress = "0x04D2903D94F2C4fc6bE6c6e1fd814a785088f2b4";
 const contractAbi = [
     {
       "inputs": [],
@@ -463,14 +463,14 @@ getSupply();
 
 async function getSupply() {
     let supply = await tokenContract.totalSupply();
-    circulating_supply.innerText = "Circulating Supply: " + ethers.utils.formatEther(supply);
+    circulating_supply.innerText  += ( +ethers.utils.formatEther(supply) ).toFixed(4);
 }
 
 tokenToBeReleased();
 
 async function tokenToBeReleased() {
     let unreleasedAmount = await tokenContract.releasableAmount();
-    unreleased_token.innerText += ethers.utils.formatEther(unreleasedAmount);
+    unreleased_token_amount.innerText = ( +ethers.utils.formatEther(unreleasedAmount) ).toFixed(4);
 }
 
 vestedAmount();

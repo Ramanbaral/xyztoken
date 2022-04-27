@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(16,16,179,1) 18%, rgba(0,212,255,1) 100%);
+}
+
+#title {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 3rem;
+    font-family: monospace;
+}
+
+.inf_title {
+    text-align: center;
+    margin: 2rem;
+    color: white;
+    font-size: 2rem;
+}
+
+#unreleased_token_amount {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ec0e0eeb;
+    margin: -1rem 0;
+}
+
+button {
+    width: 13rem;
+    height: 3rem;
+    margin-left: 50vw;
+    transform: translate(-50%);
+    margin-top: 2rem;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    color: white;
+    background-color: #54e454ed;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
